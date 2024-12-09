@@ -27,30 +27,30 @@ javascript라는 한가지 언어로 개발을 할 수 있어 생산성을 향�
 - 외부모듈을 통한 확장이 얼마든지 가능하다.
 
 ## NestJS 설치 및 실행
-VSCode를 다운받고 NestJS를 실행할 폴더를 생성한 다음 VSCode를 열어 NestJS CLI(Command /Line Interface)를 설치해야 한다. (Node.JS를 먼저 다운받아야함)
+VSCode를 다운받고 NestJS를 실행할 폴더를 생성한 다음 VSCode를 열어 NestJS CLI(Command /Line Interface)를 설치해야 한다. 
+(Node.JS를 먼저 다운받아야함)
 
 ```npm install -g @nestjs/cli```
 
-```nest --version```
+```nest --version``` 으로 버전을 확인한 후 (ex : 10.4.8) 
 
-으로 버전을 확인한 후 (ex : 10.4.8) 
-
-```nest new project-name```
-
-으로 nest project를 만들어주면 아래와 같이 nestJS project가 만들어진다.
+```nest new project-name``` 으로 nest project를 만들어주면 
+아래와 같이 nestJS project가 만들어진다.
 
 ![alt text](Project.img/nest_file.png)
 
-```npm start``` 
-명령어로 프로젝트를 실행 시키면 
+그 후 ```npm start``` 명령어로 프로젝트를 실행 시키면 
 
 ![alt text](./Project.img/dist.png)
-dist라는 폴더가 생기는데 dist 폴더는 .ts가 컴파일된 .js 파일 저장 위치 이다.
 
+dist라는 폴더가 생기는데 dist 폴더는 .ts가 컴파일된 .js 파일 저장 위치 이다.
 프로젝트를 실행 하였으니 브라우저에서 http://localhost:3000/로 확인해보면 
 
 ![alt text](./Project.img/helloWorld.png)
+
 이와 같이 서버가 실행되는걸 볼 수 있다.
+
+## NestJS 구조
 
 ### mina.ts
 main.ts 파일은 프로젝트 시작점이다.(entry point)
