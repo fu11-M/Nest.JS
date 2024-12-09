@@ -67,8 +67,8 @@ async function bootstrap() {
 bootstrap();
 ```
 
-### app.mmodule.ts
-nest.js는 모듈 단위로 정의하게 되어있음 모듈은 Controller와 Provider(Service)로 구성된다.
+### app.module.ts
+nest.js는 모듈 단위로 정의하게 되어있고 모듈은 Controller와 Provider(Service)로 구성된다.
 
 ```javascript
 import { Module } from '@nestjs/common';
@@ -114,4 +114,33 @@ export class AppService {
   }
 }
 ```
+___
+
+NestJS는 여러개의 Module들이 모여져서 만들어 진다.
+
+![alt text](./Project.img/moduleLogic.png)
+
+예를 들어 User, Order, Chat 각 모듈이 있다고 가정하였을 때 각 모듈의 역할을 나누기 위해서 모듈을 나누고 전체 애플리케이션의 모듈들을 Root Module로 관리 및 사용하기 위해서 Import해준다.
+
+각 모듈들은 Controller와 Provider(service)로 구성되어 있다.
+![alt text](./Project.img/module.png)
+
+app.module.ts 파일을 보면 Controller는 AppController로 providers는 AppService로 설정되어 있는걸 볼 수 있고
+
+app.controller.ts 파일을 보면 AppController Class가 구현되어 있고 클라이언트의 요청을 Get 메서드로 받아 appService의 getHello()를 호출 할 수 있도록 설정되어 있다.
+
+app.service.ts 파일을 보면 AppService Class가 구현되어 있고 "Hello World!" 라는 문자열을 리턴 하도록 설정되어 있다.
+___
+
+클라이언트가 request를 요청하면 
+![alt text](./Project.img/request.png)
+
+Cotroller는 request 요청을 받아 Provider(Service)에게 전달하고
+![alt text](./Project.img/controller.png)
+
+Provider(Service)는 Controller에게 전달받은 요청에 대한 로직을 수행하고 다시 Controller에게 전달한다. 
+![alt text](./Project.img/provider.png)
+
+Controller는 Provider(Service)에서 처리된 데이터를 전달받아 클라이언트에게 response 제공 한다.
+![alt text](./Project.img/response.png)
 
