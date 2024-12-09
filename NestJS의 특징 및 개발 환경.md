@@ -49,9 +49,9 @@ dist라는 폴더가 생기는데 dist 폴더는 .ts가 컴파일된 .js 파일 
 
 프로젝트를 실행 하였으니 브라우저에서 http://localhost:3000/로 확인해보면 
 
-![alt text](./Project.img/helloWorld.png) 
+![alt text](./Project.img/helloWorld.png)
+이와 같이 서버가 실행되는걸 볼 수 있다.
 
-이와 같이 서버가 작동하는 것을 볼 수 있다.
 ### mina.ts
 main.ts 파일은 프로젝트 시작점이다.(entry point)
 
