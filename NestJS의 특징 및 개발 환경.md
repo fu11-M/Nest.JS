@@ -49,6 +49,7 @@ dist라는 폴더가 생기는데 dist 폴더는 .ts가 컴파일된 .js 파일 
 ![alt text](./Project.img/helloWorld.png)
 
 이와 같이 서버가 실행되는걸 볼 수 있다.
+___
 
 ## NestJS 구조
 
