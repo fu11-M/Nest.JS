@@ -116,7 +116,7 @@ export class AppService {
 ```
 ___
 
-NestJS는 여러개의 Module들이 모여져서 만들어 진다.
+### NestJS는 여러개의 Module들이 모여져서 만들어 진다.
 
 ![alt text](./Project.img/moduleLogic.png)
 
