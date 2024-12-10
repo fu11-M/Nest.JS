@@ -121,7 +121,7 @@ ___
 ![alt text](./Project.img/moduleLogic.png)
 
 예를 들어 User, Order, Chat 각 모듈이 있다고 가정하였을 때 각 모듈의 역할을 나누기 위해서 모듈을 나누고 전체 애플리케이션의 모듈들을 Root Module로 관리 및 사용하기 위해서 Import해준다.
-
+___
 각 모듈들은 Controller와 Provider(service)로 구성되어 있다.
 ![alt text](./Project.img/module.png)
 
@@ -134,12 +134,15 @@ ___
 
 클라이언트가 request를 요청하면 
 ![alt text](./Project.img/request.png)
+___
 
 Cotroller는 request 요청을 받아 Provider(Service)에게 전달하고
 ![alt text](./Project.img/controller.png)
+___
 
 Provider(Service)는 Controller에게 전달받은 요청에 대한 로직을 수행하고 다시 Controller에게 전달한다. 
 ![alt text](./Project.img/provider.png)
+___
 
 Controller는 Provider(Service)에서 처리된 데이터를 전달받아 클라이언트에게 response 제공 한다.
 ![alt text](./Project.img/response.png)
