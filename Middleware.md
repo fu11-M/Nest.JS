@@ -6,6 +6,7 @@ Middleware는 클라이언트 요청(Request)이 라우터 핸들러(Controller�
 ![alt text](./Project.img/middleware.png)
 
 Middleware로 클라이언트의 요청을 라우터 Router Handler가 받기 전에 공통적으로 처리해야 하는 부분(인증, 로깅, 검증)들의 처리를 중복 없이 개발할 수 있다.
+___
 
 ## 미들웨어 사용
 - @Injectalbe 데코레이터 사용
@@ -60,7 +61,12 @@ export class AppModule implements NestModule{ // configure 메서드를 사용�
 }
 ```
 App.Module.ts는 NestJS 애플리케이션의 루트 모듈로, LoggerMiddleware를 특정 경로(users)에 적용하도록 설정하여 클라이언트가 users 경로로 요청을 보낼 때마다 LoggerMiddleware 에서 요청이 로깅된다.
+![alt text](./Project.img/postmanMiddlewarePost.png)
 
+![alt text](./Project.img/postmanMiddlewareGet.png)
+
+![alt text](./Project.img/middlewareLog.png)
+___
 ### 미들웨어 여러개 사용가능
 ```javascript
 consumer.apply(cors(), helmet(), logger).forRoutes(UserController);
@@ -77,10 +83,4 @@ await app.listen(3000);
 
 하지만 Global 미들웨어에서 DI 컨테이너에 엑세스 할 수 없다. (class로 선언된 미들웨어를 사용할 수 없다.)
 app.use()에서 미들웨어를 사용할 때는 대신 functional middleware를 사용하고 있다.
-
-![alt text](./Project.img/postmanMiddlewarePost.png)
-
-![alt text](./Project.img/postmanMiddlewareGet.png)
-
-![alt text](./Project.img/middlewareLog.png)
 
