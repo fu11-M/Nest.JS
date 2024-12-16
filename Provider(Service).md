@@ -1,5 +1,4 @@
 ## Provider(service)
-
 NestJS에서 Provider는 서비스(Service), 리포지토리(Repository), 팩토리(Factory), 헬퍼(Helper) 등을 의미하며, 애플리케이션의 비즈니스 로직을 캡슐화하고 재사용 가능한 로직을 구현하기 위한 기본 단위이다. Provider는 종속성 주입(Dependency Injection, DI)을 통해 컨트롤러나 Interface를 Provider에 주입되어 관련한 비즈니스 로직을 수행한다.
 
 ### Interface
