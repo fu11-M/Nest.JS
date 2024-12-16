@@ -73,7 +73,7 @@ export class UsersController {
         // Gender: ${CreateUserDto.name}
         // Address: ${CreateUserDto.password}`; 
     }
-    
+
     @Put(':id')
     update(@Param('id')id: string, @Body() CreateUserDto: CreateUserDto){
         return `This action update a #${id} users`;
@@ -86,6 +86,9 @@ export class UsersController {
 }
 ```
 
+### Post
 ![alt text](./Project.img/postmanPost.png)
 
+
+### Get
 ![alt text](./Project.img/postmanGet.png)
