@@ -60,7 +60,7 @@ export class AppModule implements NestModule {
   }
 }
 ```
-
+___
 app.module.ts에 import한뒤 Entity 클래스를 만들어준다.
 ![alt text](./Project.img/usersEntiry.png)
 
@@ -195,9 +195,13 @@ ___
 ![alt text](./Project.img/readAllUsers.png)
 
 ___
-### Read Id User
+### ID 기준으로 유저 확인
 ![alt text](./Project.img/read_Id_Users.png)
 
+___
+### ID 기준으로 유저 삭제
 ![alt text](./Project.img/deleteUsers.png)
 
+___
+### 삭제한 ID 결과 확인
 ![alt text](./Project.img/deleteResult.png)
