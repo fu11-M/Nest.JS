@@ -65,13 +65,6 @@ export class UsersController {
     @Post()
     create(@Body() CreateUserDto: CreateUserDto){
         return this.usersService.create(CreateUserDto);
-        
-        // `This action adds a new users 
-        // Name: ${CreateUserDto.address}
-        // Password: ${CreateUserDto.email}
-        // Email: ${CreateUserDto.gender}
-        // Gender: ${CreateUserDto.name}
-        // Address: ${CreateUserDto.password}`; 
     }
 
     @Put(':id')
@@ -85,10 +78,3 @@ export class UsersController {
     }
 }
 ```
-
-### Post
-![alt text](./Project.img/postmanPost.png)
-
-
-### Get
-![alt text](./Project.img/postmanGet.png)
