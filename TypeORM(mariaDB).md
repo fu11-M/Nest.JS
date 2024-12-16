@@ -61,9 +61,7 @@ export class AppModule implements NestModule {
 }
 ```
 ___
-app.module.ts에 import한뒤 Entity 클래스를 만들어준다.
-
-![alt text](./Project.img/usersEntiry.png)
+데이터 베이스에 매핑할 Entity 클래스를 만들고 어플리케이션에서 사용하기 위해 app.module.ts에 import해준다.
 
 ```javascript
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
@@ -145,7 +143,6 @@ export class UsersService {
     }
 
 }
-
 ```
 
 user.service.ts에 맞춰서 Controller도 작성해준다.
@@ -204,5 +201,5 @@ ___
 ![alt text](./Project.img/deleteUsers.png)
 
 ___
-### 삭제한 ID 결과 확인
+### ID 기준으로 삭제한 결과 확인
 ![alt text](./Project.img/deleteResult.png)
