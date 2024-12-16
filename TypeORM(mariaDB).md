@@ -62,6 +62,7 @@ export class AppModule implements NestModule {
 ```
 ___
 app.module.ts에 import한뒤 Entity 클래스를 만들어준다.
+
 ![alt text](./Project.img/usersEntiry.png)
 
 ```javascript
