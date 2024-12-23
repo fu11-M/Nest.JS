@@ -201,5 +201,5 @@ ___
 ![alt text](./Project.img/deleteUsers.png)
 
 ___
-### ID 기준으로 삭제한 결과 확인
+### ID 기준으로 삭제한 데이터 확인
 ![alt text](./Project.img/deleteResult.png)
