@@ -2,7 +2,6 @@
 JWT는 Json 객체를 사용하여 정보를 안전하고 간결하게 표현한 토큰이다.
 주로 사용자 인증 및 정보 전달을 위해 사용되며 데이터를 토큰에 포함하며 state를 클라이언트에 저장한다. (Stateless Authentication)
 
-
 ### state
 state(상태)란 사용자 인증 정보나 사용자와 서버 간이 세션 정보를 포함한 데이터를 서버 측에서 유지 관리하는 것을 의미한다.
 
@@ -50,17 +49,21 @@ JWT 기반 인증은 사용자가 처음 로그인할 때, 서버가 아이디�
         로컬 스토리지와 비슷하게 JS로 접근이 가능하기 때문에 서버측에서 HTTP Only, Secure, Samesite 등 옵션을 걸어 줘야 한다.
         (모든 요청에 쿠키가 함께 전송되기 때문에 성능 저하의 원인이 될 수 있어 MDN 공식 문서에서 쿠키에 저장하는 방식보단 로컬 스토리지에 저장하는 형식이 권장됨.)
 
+#### 회원가입
+![alt text](./Project.img/register.png)
+
+#### DB 데이터 
+![alt text](./Project.img/insert_data.png)
+
+#### 로그인 - JWT 발급
+![alt text](./Project.img/lojin_JWT.png)
+
+#### 로그인한 유저의 JWT값 조회 
+![alt text](./Project.img/result_JWT.png)
 
 
-
-
-![alt text](image.png)
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-![alt text](image-3.png)
+### 권한
+권한 추가를 위해서 UserAuthority 테이블을 만든다.
 
 MariaDB [test_NestJS]> INSERT INTO `test_NestJS`.`UsersAuthority` (users_id, authority_name) VALUES (1, 'ROLE_USER');
 
@@ -68,28 +71,20 @@ MariaDB [test_NestJS]> INSERT INTO `test_NestJS`.`UsersAuthority` (users_id, aut
 
 MariaDB [test_NestJS]> INSERT INTO `test_NestJS`.`UsersAuthority` (users_id, authority_name) VALUES (2, 'ROLE_USER');
 
-권한 추가 로그인
-![alt text](image-4.png)
+권한 추가후 다시 로그인
+![alt text](./Project.img/JWT_Authority_login.png)
 
-로그인 후 다시 인증 요청
-![alt text](image-5.png)
+Token 값으로 로그인한 유저의 권한 확인
+![alt text](./Project.img/JWT_Authority.png)
 
-권한만 나오게 수정 
+권한이 있는 사용자 확인
+![alt text](./Project.img/AuthorityUsers.png)
 
-다시 로그인
-![alt text](image-6.png)
+admin 권한을 가지고 있는 유저 확인
+![alt text](./Project.img/adminUser.png)
 
-권한 요청
-![alt text](image-7.png)
+admin 권한이 아닌 유저 로그인
+![alt text](./Project.img/roleUser.png)
 
-어드민 권한에 따른 요청
-다시 로그인
-![alt text](image-8.png)
-
-![alt text](image-9.png)
-
-어드민 권한이 아닌 다른 요청
-![alt text](image-10.png)
-
-
-![alt text](image-11.png)
+admin 권한 요청
+![alt text](./Project.img/roleUser_adminResult.png)
