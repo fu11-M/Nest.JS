@@ -77,14 +77,11 @@ MariaDB [test_NestJS]> INSERT INTO `test_NestJS`.`UsersAuthority` (users_id, aut
 Token 값으로 로그인한 유저의 권한 확인
 ![alt text](./Project.img/JWT_Authority.png)
 
-권한이 있는 사용자 확인
-![alt text](./Project.img/AuthorityUsers.png)
-
 admin 권한을 가지고 있는 유저 확인
 ![alt text](./Project.img/adminUser.png)
 
 admin 권한이 아닌 유저 로그인
 ![alt text](./Project.img/roleUser.png)
 
-admin 권한 요청
+admin 권한이 아닌 유저로 admin 권한 요청
 ![alt text](./Project.img/roleUser_adminResult.png)
