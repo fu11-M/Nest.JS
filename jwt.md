@@ -71,7 +71,7 @@ MariaDB [test_NestJS]> INSERT INTO `test_NestJS`.`UsersAuthority` (users_id, aut
 
 MariaDB [test_NestJS]> INSERT INTO `test_NestJS`.`UsersAuthority` (users_id, authority_name) VALUES (2, 'ROLE_USER');
 
-권한 추가후 다시 로그인
+권한 추가 후 다시 로그인
 ![alt text](./Project.img/JWT_Authority_login.png)
 
 Token 값으로 로그인한 유저의 권한 확인
@@ -83,5 +83,5 @@ admin 권한을 가지고 있는 유저 확인
 admin 권한이 아닌 유저 로그인
 ![alt text](./Project.img/roleUser.png)
 
-admin 권한이 아닌 유저로 admin 권한 요청
+admin 권한이 아닌 유저로 admin 권한 요청 - 403 에러 (클라이언트가 요청한 리소스에 엑세스할 권한이 없음)
 ![alt text](./Project.img/roleUser_adminResult.png)
