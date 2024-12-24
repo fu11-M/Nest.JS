@@ -131,7 +131,6 @@ app.controller.ts 파일을 보면 AppController Class가 구현되어 있고 �
 
 app.service.ts 파일을 보면 AppService Class가 구현되어 있고 "Hello World!" 라는 문자열을 리턴 하도록 설정되어 있다.
 ___
-
 클라이언트가 request를 요청하면 
 ![alt text](./Project.img/request.png)
 ___
