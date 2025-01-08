@@ -108,15 +108,13 @@ export class UsersModule {
 }
 ```
 
-DB에 저장할 비즈니스 로직을 구현하기 위해 user.service.ts에 Users Entity를 의존성 주입을 하고 DB로직
-메서들 작성해준다.
+DB에 저장할 비즈니스 로직을 구현하기 위해 user.service.ts에 Users Entity를 의존성 주입을 하고 DB로직 메서드를 작성해준다.
 
 ```javascript
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Users } from './Entity/users.entity';
 import { Repository } from 'typeorm';
-
 
 @Injectable() // Dependency injection
 export class UsersService {
@@ -141,7 +139,6 @@ export class UsersService {
     async remove(id: number): Promise<void>{
         await this.usersRepository.delete(id);
     }
-
 }
 ```
 
